@@ -53,99 +53,7 @@
 
       <div class="album py-5 bg-light">
         <div class="container">
-          <div class="row">
-            
-          <!-- 1 -->
-          <div class="col-md-4">
-              <div class="card mb-4 shadow">
-                <img src="images/IMG_0514.jpg" title="Argyle, 2018" alt="Oil on riveted aluminum, 53 &times; 55 inches" class="img-fluid" data-toggle="modal" data-target="#showModal">
-              </div>
-            </div>
-
-            <!-- 2 -->
-            <div class="col-md-4">
-              <div class="card mb-4 shadow">
-                <img src="images/IMG_1369.jpg" title="2018" alt="Metal and oil" class="img-fluid" data-toggle="modal" data-target="#showModal">
-              </div>
-            </div>
-            
-            <!-- 3 -->
-            <div class="col-md-4">
-              <div class="card mb-4 shadow">
-                <img src="images/IMG_4204.jpg" title="2017" alt="Oil on canvas" class="img-fluid" data-toggle="modal" data-target="#showModal">
-              </div>
-            </div>
-
-            <!-- 4 -->
-            <div class="col-md-4">
-              <div class="card mb-4 shadow">
-                <img src="images/IMG_1368.jpg" title="2017" alt="Oil on canvas" class="img-fluid" data-toggle="modal" data-target="#showModal">
-              </div>
-            </div>
-
-            <!-- 5 -->
-            <div class="col-md-4">
-              <div class="card mb-4 shadow">
-                <img src="images/IMG_1372.jpg" title="Grasses at Bandon Dunes, 2017" alt="Acrylic on canvas" class="img-fluid" data-toggle="modal" data-target="#showModal">
-              </div>
-            </div>
-
-            <!-- 6 -->
-            <div class="col-md-4">
-                <div class="card mb-4 shadow">
-                  <img src="images/IMG_1322.jpg" title="2017" alt="Acrylic on canvas" class="img-fluid" data-toggle="modal" data-target="#showModal">
-                </div>
-              </div>
-
-            <!-- 7 -->
-            <div class="col-md-4">
-              <div class="card mb-4 shadow">
-                <img src="images/IMG_1374.jpg" title="2016" alt="Oil on canvas" class="img-fluid" data-toggle="modal" data-target="#showModal">
-              </div>
-            </div>
-
-            <!-- 8 -->
-            <div class="col-md-4">
-              <div class="card mb-4 shadow">
-                <img src="images/IMG_1370.jpg" title="2016" alt="Oil on canvas" class="img-fluid" data-toggle="modal" data-target="#showModal">
-              </div>
-            </div>
-
-            <!-- 9 -->
-            <div class="col-md-4">
-              <div class="card mb-4 shadow">
-                <img src="images/IMG_1375.jpg" title="2013" alt="Oil on canvas" class="img-fluid" data-toggle="modal" data-target="#showModal">
-              </div>
-            </div>
-
-            <!-- 10 -->
-            <div class="col-md-4">
-              <div class="card mb-4 shadow">
-                <img src="images/IMG_7519.jpg" title="2012" alt="Oil on canvas" class="img-fluid" data-toggle="modal" data-target="#showModal">
-              </div>
-            </div>
-                
-            <!-- 11 -->
-            <div class="col-md-4">
-              <div class="card mb-4 shadow">
-                <img src="images/IMG_9554.jpg" title="2012" alt="Oil on canvas" class="img-fluid" data-toggle="modal" data-target="#showModal">
-              </div>
-            </div>
-              
-            <!-- 12 -->
-            <div class="col-md-4">
-              <div class="card mb-4 shadow">
-                <img src="images/IMG_1371.jpg" title="2003" alt="Latex paint on canvas" class="img-fluid" data-toggle="modal" data-target="#showModal">
-              </div>
-            </div>
-
-            <!-- 13 -->
-            <div class="col-md-4">
-              <div class="card mb-4 shadow">
-                <img src="images/IMG_1373.jpg" title="2003" alt="Latex paint on canvas" class="img-fluid" data-toggle="modal" data-target="#showModal">
-              </div>
-            </div>
-
+          <div id="gallery" class="row">
           </div>
         </div>
       </div>
@@ -157,10 +65,7 @@
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body">
-                  <figure>
-                      <p><img class="img-fluid" src="" /></p>
-                      <figcaption></figcaption>
-                  </figure>
+                  <p><img class="img-fluid" src="" /></p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -173,7 +78,7 @@
 
     <footer class="text-muted py-5">
       <div class="container">
-        <p>&copy; 2018 Brit Bartter</p>
+        <p>&copy; 2019 Brit Bartter</p>
       </div>
     </footer>
 
@@ -182,19 +87,207 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js"></script>
 
+    <script type="text/javscript" src="data.js"></script>
     <script>
-    $(document).ready(function () {
-            $('#showModal').on('show.bs.modal', function (e) {
-                var image = $(e.relatedTarget).attr('src');
-                var title = $(e.relatedTarget).attr('title');
-                var alt   = $(e.relatedTarget).attr('alt');
+    $(document).ready(function () {   
+      var data = [
+        {
+          "name": "Argyle",
+          "year": 2018,
+          "medium": "Oil on riveted aluminum sheet",
+          "dimensions": "53ʺ × 55ʺ",
+          "image": "Argyle"
+        },
+        {
+          "name": "Muscular",
+          "year": 2018,
+          "medium": "Oil on folded aluminum sheet",
+          "dimensions": "48ʺ × 34ʺ",
+          "image": "Muscular"
+        },
+        {
+          "name": "Stella Inspired",
+          "year": 2018,
+          "medium": "Oil on aluminum sheet backed by expanded aluminum",
+          "dimensions": "16ʺ × 16ʺ",
+          "image": "StellaInspired"
+        },
+        {
+          "name": "Homage to Jay Phillips",
+          "year": 2017,
+          "medium": "Oil on canvas w/ canvas flaps backed w/ foam core board",
+          "dimensions": "48ʺ × 48ʺ",
+          "image": "HomageToJayPhillips"
+        },
+        {
+          "name": "Quadrant I",
+          "year": 2017,
+          "medium": "Oil on folded aluminum sheet",
+          "dimensions": "12ʺ × 14ʺ",
+          "image": "QuadrantI"
+        },
+        {
+          "name": "Quadrant II",
+          "year": 2017,
+          "medium": "Oil on folded aluminum sheet",
+          "dimensions": "14ʺ × 13ʺ",
+          "image": "QuadrantII"
+        },
+        {
+          "name": "Quadrant III",
+          "year": 2017,
+          "medium": "Oil on folded aluminum sheet",
+          "dimensions": "12ʺ × 16ʺ",
+          "image": "QuadrantIII"
+        },
+        {
+          "name": "Quadrant IV",
+          "year": 2017,
+          "medium": "Oil on folded aluminum sheet",
+          "dimensions": "16ʺ × 13ʺ",
+          "image": "QuadrantIV"
+        },
+        {
+          "name": "Naples National Sunrise",
+          "year": 2017,
+          "medium": "Acrylic on canvas",
+          "dimensions": "30ʺ × 36ʺ",
+          "image": "NaplesNationalSunrise"
+        },
+        {
+          "name": "Bandon Dune Grasses",
+          "year": 2017,
+          "medium": "Acrylic on canvas",
+          "dimensions": "30ʺ × 36ʺ",
+          "image": "BandonDuneGrasses"
+        },
+        {
+          "name": "Conger Inspiration",
+          "year": 2017,
+          "medium": "Oil on canvas",
+          "dimensions": "30ʺ × 36ʺ",
+          "image": "CongerInspiration"
+        },
+        {
+          "name": "Jaffe Collage",
+          "year": 2017,
+          "medium": "Oil on canvas",
+          "dimensions": "48ʺ × 24ʺ",
+          "image": "JaffeCollage"
+        },
+        {
+          "name": "Untitled (large)",
+          "year": 2016,
+          "medium": "Oil on canvas",
+          "dimensions": "30ʺ × 36ʺ",
+          "image": "UntitledLarge"
+        },
+        {
+          "name": "Untitled",
+          "year": 2016,
+          "medium": "Oil on panel board",
+          "dimensions": "12ʺ × 12ʺ",
+          "image": "Untitled"
+        },
+        {
+          "name": "Untitled",
+          "year": 2016,
+          "medium": "Oil on panel board",
+          "dimensions": "12ʺ × 12ʺ",
+          "image": "Untitled4"
+        },
+        {
+          "name": "Brora",
+          "year": 2016,
+          "medium": "Oil on canvas",
+          "dimensions": "12ʺ × 48ʺ",
+          "image": "Brora"
+        },
+        {
+          "name": "Untitled",
+          "year": 2016,
+          "medium": "Oil on panel board",
+          "dimensions": "12ʺ × 12ʺ",
+          "image": "Untitled4"
+        },
+        {
+          "name": "Christmas",
+          "year": 2015,
+          "medium": "Oil on panel board",
+          "dimensions": "4ʺ × 4ʺ",
+          "image": "Christmas"
+        },
+        {
+          "name": "Untitled",
+          "year": 2014,
+          "medium": "Acrylic on canvas",
+          "dimensions": "12ʺ × 12ʺ each",
+          "image": "Untitled3"
+        },
+        {
+          "name": "Matisse Collision",
+          "year": 2013,
+          "medium": "Acrylic on canvas",
+          "dimensions": "24ʺ × 36ʺ",
+          "image": "MatisseCollision"
+        },
+        {
+          "name": "Lily",
+          "year": 2012,
+          "medium": "Acrylic on canvas",
+          "dimensions": "36ʺ × 36ʺ",
+          "image": "Lily"
+        },
+        {
+          "name": "Sea Pines",
+          "year": 2010,
+          "medium": "Acrylic on canvas",
+          "dimensions": "30ʺ × 36ʺ",
+          "image": "SeaPines"
+        },
+        {
+          "name": "Geometry",
+          "year": 2009,
+          "medium": "Acrylic on canvas",
+          "dimensions": "36ʺ × 36ʺ",
+          "image": "Geometry"
+        },
+        {
+          "name": "Untitled",
+          "year": 2008,
+          "medium": "Acrylic and paper on canvas",
+          "dimensions": "82ʺ × 42ʺ",
+          "image": "Untitled2"
+        }
+      ]
 
-                $("#showModal img").attr("src", image);
-                $("#showModal img").attr("title", title);
-                $("#showModal img").attr("alt", alt);
+      $(data).each(function (i) {
+          var artwork = data[i]
+          var card = `
+          <div class="col-md-4">
+              <div class="card mb-4 shadow">
+                <img src="images/${artwork.image}.jpg" title="${artwork.name}" alt="${artwork.name}" class="img-fluid" data-toggle="modal" data-target="#showModal">
+                <div class="card-body">
+                  <p class="card-text">${artwork.name}, ${artwork.year}</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <small class="text-muted">${artwork.medium}, ${artwork.dimensions}</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `
+          $("#gallery").append(card)
+      });
 
-                $("#showModal figcaption").html("<em>" + title + "</em>" + "<br /><small class=\"text-muted\">" + alt + "</small>");
-            });
+      $('#showModal').on('show.bs.modal', function (e) {
+          var src = $(e.relatedTarget).attr('src');
+          var title = $(e.relatedTarget).attr('title');
+          var alt   = $(e.relatedTarget).attr('alt');
+
+          $("#showModal img").attr("src", src);
+          $("#showModal img").attr("title", title);
+          $("#showModal img").attr("alt", alt);
+      });
     });
     </script> 
   </body>
