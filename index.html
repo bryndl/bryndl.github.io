@@ -58,6 +58,12 @@
 
       <div class="album py-5 bg-light">
         <div class="container">
+
+            <div class="alert bg-info text-light shadow p-3 mb-5 rounded">
+              <h4 class="alert-heading">Gallery Exhibition</h4>
+              <p class="mb-0"><em>Color Wheel</em> will be featured in the <a href="https://naplesart.org/exhibitions" class="alert-link" style="color: rgb(160, 18, 67); text-decoration: underline;">Traces of Red</a> exhibition in Naples, FL from May 4<sup>th</sup> &ndash; 29<sup>th</sup></p>
+            </div>
+
           <div id="gallery" class="row">
           </div>
         </div>
@@ -268,12 +274,18 @@
 
       $(data).each(function (i) {
           var artwork = data[i]
+          var year = artwork.year
+
+          if (artwork.image =="ColorWheel"){
+            year += '<span class="float-right badge badge-info">ON EXHIBITION</span>'
+          }
+
           var card = `
           <div class="col-md-4">
               <div class="card mb-4 shadow">
                 <img src="images/${artwork.image}.jpg" title="${artwork.name}" alt="${artwork.name}" class="img-fluid" data-toggle="modal" data-target="#showModal">
                 <div class="card-body">
-                  <p class="card-text">${artwork.name}, ${artwork.year}</p>
+                  <p class="card-text">${artwork.name}, ${year}</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <small class="text-muted">${artwork.medium}, ${artwork.dimensions}</small>
                   </div>
