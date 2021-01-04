@@ -1,5 +1,26 @@
 [
   {
+    "name": "Homage to Sonia Delaunay",
+    "year": 2020,
+    "medium": "Oil on canvas",
+    "dimensions": "40ʺ × 60ʺ",
+    "image": "HomageToSoniaDelaunay"
+  },
+  {
+    "name": "Three Ring Circus",
+    "year": 2020,
+    "medium": "Acrylic on woven aluminum sheet",
+    "dimensions": "30ʺ × 33ʺ",
+    "image": "ThreeRingCircus"
+  },
+  {
+    "name": "Absence, Presence, Motion",
+    "year": 2020,
+    "medium": "Oil on canvas",
+    "dimensions": "36ʺ × 36ʺ",
+    "image": "AbsencePresenceMotion"
+  },
+  {
     "name": "Halloween Graphic",
     "year": 2019,
     "medium": "Oil on aluminum sheet",
